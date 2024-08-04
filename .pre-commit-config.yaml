@@ -1,0 +1,16 @@
+repos:
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.8
+    hooks:
+    -   id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+        types: [python]
+        files: ^(src|tests)/
+    -   id: ruff-format
+        types: [python]
+        files: ^(src|tests)/
+
+default_language_version:
+    python: python3.11
+
+default_install_hook_types: [pre-commit, commit-msg]

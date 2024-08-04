@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "outlook-folder-sync-tool"
+version = "0.1.0"
+description = ""
+authors = ["K-dash <dummy@example.com>"]
+readme = "README.md"
+package-mode = false
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pywin32 = "^306"
+pyinstaller = "^6.9.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.6"
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# ruff global settings
+[tool.ruff]
+line-length = 80
+
+# linter
+[tool.ruff.lint]
+# I: isort
+# F: Pyflakes
+# E: Pycodestyle Error
+# W: Pycodestyle Warning
+# P: Pylint
+# PT: flake8-pytest-style
+preview = true
+select = ['I', 'F', 'W', 'PL', 'PT']
+
+[tool.ruff.lint.pycodestyle]
+ignore-overlong-task-comments = true
+max-doc-length = 120
+
+# formatter
+[tool.ruff.format]
+preview = true
+quote-style = 'double'
+docstring-code-format = true
