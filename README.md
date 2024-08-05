@@ -72,17 +72,17 @@ This tool allows you to export and import Outlook folder structures, facilitatin
 
 ## Examples
 
-1. Exporting the folder structure of the "Inbox" folder for the account "john.doe@example.com":
+1. Exporting the folder structure of the `Inbox` folder for the account `john.doe@example.com`:
    ```
    poetry run python src/outlook_folder_export_csv.py john.doe@example.com Inbox
    ```
 
-2. Importing a folder structure from "folder_structure.json" to the account "jane.doe@example.com":
+2. Importing a folder structure from `folder_structure.json` to the account `jane.doe@example.com`:
    ```
    poetry run python src/outlook_folder_import_csv.py jane.doe@example.com folder_structure.json
    ```
 
-3. Example of a JSON file structure (folder_structure.json):
+3. Example of a JSON file structure (`folder_structure.json`):
    ```json
    {
      "name": "Inbox",
@@ -121,7 +121,7 @@ This tool allows you to export and import Outlook folder structures, facilitatin
    }
    ```
 
-   This JSON structure represents an "Inbox" with subfolders for "Project A" (which has its own subfolders), "Personal", and an "Archive" folder with yearly subfolders.
+   This JSON structure represents an `Inbox` with subfolders for `Project A` (which has its own subfolders), `Personal`, and an `Archive` folder with yearly subfolders.
 
 ## Troubleshooting
 
@@ -135,9 +135,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## WIP
-- Add unit test.
-- Export/Import account-independent mail distribution rules.
-- `.exe` file package distribution.
-- Add pre-commit hook.
 - Add CI pipline
