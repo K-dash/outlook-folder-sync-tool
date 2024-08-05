@@ -37,49 +37,49 @@ This tool allows you to export and import Outlook folder structures, facilitatin
 
 1. To export a folder structure:
    ```
-   poetry run python src/outlook_folder_export_csv.py <Outlook account name> <Folder name to export>
+   poetry run python src/outlook_folder_export.py <Outlook account name> <Folder name to export>
    ```
 
 2. To import a folder structure:
    ```
-   poetry run python src/outlook_folder_import_csv.py <Outlook account name> <JSON file name>
+   poetry run python src/outlook_folder_import.py <Outlook account name> <JSON file name>
    ```
 
 ### Using Executable Files
 
 1. Create executable files using PyInstaller:
    ```
-   poetry run pyinstaller --onefile src/outlook_folder_export_csv.py
-   poetry run pyinstaller --onefile src/outlook_folder_import_csv.py
+   poetry run pyinstaller --onefile src/outlook_folder_export.py
+   poetry run pyinstaller --onefile src/outlook_folder_import.py
    ```
 
    Alternatively, you can create both executables at once using:
    ```
-   poetry run pyinstaller --onefile src/outlook_folder_export_csv.py src/outlook_folder_import_csv.py
+   poetry run pyinstaller --onefile src/outlook_folder_export.py src/outlook_folder_import.py
    ```
 
 2. The executable files will be created in the `dist` directory.
 
 3. To export a folder structure:
    ```
-   dist\outlook_folder_export_csv.exe <Outlook account name> <Folder name to export>
+   dist\outlook_folder_export.exe <Outlook account name> <Folder name to export>
    ```
 
 4. To import a folder structure:
    ```
-   dist\outlook_folder_import_csv.exe <Outlook account name> <JSON file name>
+   dist\outlook_folder_import.exe <Outlook account name> <JSON file name>
    ```
 
 ## Examples
 
 1. Exporting the folder structure of the `Inbox` folder for the account `john.doe@example.com`:
    ```
-   poetry run python src/outlook_folder_export_csv.py john.doe@example.com Inbox
+   poetry run python src/outlook_folder_export.py john.doe@example.com Inbox
    ```
 
 2. Importing a folder structure from `folder_structure.json` to the account `jane.doe@example.com`:
    ```
-   poetry run python src/outlook_folder_import_csv.py jane.doe@example.com folder_structure.json
+   poetry run python src/outlook_folder_import.py jane.doe@example.com folder_structure.json
    ```
 
 3. Example of a JSON file structure (`folder_structure.json`):
